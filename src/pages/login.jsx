@@ -28,7 +28,7 @@ class Login extends Component {
     return (
       <div data-testid="page-login">
         <label htmlFor="Login">
-          Seu nome:
+          Your Name:
           <input
             name="Login"
             type="text"
@@ -44,7 +44,7 @@ class Login extends Component {
           onClick={ this.handleLogin }
           disabled={ name.length < charMin }
         >
-          Entrar
+          Enter
         </button>
         {Loaded && <Loading />}
       </div>

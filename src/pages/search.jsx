@@ -72,12 +72,13 @@ class Search extends Component {
     return (
       <div data-testid="page-search">
         <Header />
-        <form>
+        <form className='search-father'>
           <input
+          className='search-button'
             data-testid="search-artist-input"
             name="artistInput"
             onChange={ this.inputChange }
-            placeholder="Pesquisar"
+            placeholder="Search "
             type="text"
             value={ valueOn }
           />
@@ -87,7 +88,7 @@ class Search extends Component {
             disabled={ this.checkAble() }
             onClick={ this.handleClick }
           >
-            Pesquisar
+            Search
           </button>
         </form>
         <div>

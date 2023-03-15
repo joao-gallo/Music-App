@@ -18,24 +18,26 @@ class Header extends React.Component {
   render() {
     const { user } = this.state;
     return (
-      <header data-testid="header-component">
-        <h2>cabeçote</h2>
-        { !user.name ? <Loading />
+      <header data-testid="header-component" className='header'>
+        <h2>Music App</h2>
+        <div className='link-father'>
+          <Link className='link' data-testid="link-to-search" to="/search">
+            Search
+          </Link>
+          <Link className='link' data-testid="link-to-favorites" to="/favorites">
+            Favorites
+          </Link>
+          <Link className='link' data-testid="link-to-profile" to="/profile">
+            Profile
+          </Link>
+        </div>
+        {/* Checking if the user is logged in, if succeed, user's name should appear */}
+        {!user.name ? <Loading />
           : (
-            <p data-testid="header-user-name">
-              oi,
-              { user.name }
-              ,quer ouvir uma coisinha?
-            </p>) }
-        <Link data-testid="link-to-search" to="/search">
-          search
-        </Link>
-        <Link data-testid="link-to-favorites" to="/favorites">
-          favorites
-        </Link>
-        <Link data-testid="link-to-profile" to="/profile">
-          profile
-        </Link>
+            <p data-testid="header-user-name" className='username-p'>
+              {user.name}
+              , wanna listen some cool songs?
+            </p>)}
       </header>
     );
   }

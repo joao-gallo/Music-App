@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(images/download\ \(1\).jpg);
+  background-size: cover;
 }
 
 code {
@@ -14,6 +16,40 @@ code {
 
 .loading {
   align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  color: aliceblue;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.link-father {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+/*   border: 1px solid green; */
+}
+
+.link {
+  background-color: rgb(0, 0, 0);
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 3px;
+  transition: 300ms;
+}
+
+.header .link:hover{
+  color: black;
+  background-color: white;
+}
+
+.search-father{
   display: flex;
   justify-content: center;
 }
