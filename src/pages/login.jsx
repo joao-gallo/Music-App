@@ -26,7 +26,7 @@ class Login extends Component {
     const { name, Loaded } = this.state;
     const charMin = 3;
     return (
-      <div data-testid="page-login">
+      <div data-testid="page-login" className='login-father'>
         <label htmlFor="Login">
           Your Name:
           <input

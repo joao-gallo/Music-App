@@ -41,13 +41,13 @@ class Search extends Component {
   results() {
     const { resultOn, artist } = this.state;
     return (
-      resultOn.length === 0 ? <h2>Nenhum álbum foi encontrado</h2>
+      resultOn.length === 0 ? <h2 className='error'>Sorry, couldn't find this album</h2>
         : (
-          <div>
+          <div className='results'>
             <h4>
-              { `Resultado de álbuns de: ${artist}` }
+              { `Here, check these ${artist} albuns ` }
             </h4>
-            <div>
+            <div className='results-search'>
               {resultOn.map(
                 (result) => (
                   <div key={ result.collectionId }>
@@ -55,6 +55,7 @@ class Search extends Component {
                     <Link
                       to={ `/album/${result.collectionId}` }
                       data-testid={ `link-to-album-${result.collectionId}` }
+                      className='results-link'
                     >
                       {result.collectionName}
                     </Link>
