@@ -41,7 +41,7 @@ class Search extends Component {
   results() {
     const { resultOn, artist } = this.state;
     return (
-      resultOn.length === 0 ? <h2 className='error'>Sorry, couldn't find this album</h2>
+      resultOn.length === 0 ? <h2 className='error'>Sorry, couldn't find this</h2>
         : (
           <div className='results'>
             <h4>

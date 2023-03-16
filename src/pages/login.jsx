@@ -27,6 +27,7 @@ class Login extends Component {
     const charMin = 3;
     return (
       <div data-testid="page-login" className='login-father'>
+        <h1>Welcome to my Music App</h1>
         <label htmlFor="Login">
           Your Name:
           <input
@@ -47,6 +48,10 @@ class Login extends Component {
           Enter
         </button>
         {Loaded && <Loading />}
+        <a href="https://www.linkedin.com/in/jo%C3%A3o-gallo-19a51622a/">My Linkedin</a>
+        <br />
+        <a href="https://github.com/joao-gallo"> My Github</a>
+        <h4>João Gallo</h4>
       </div>
     );
   }

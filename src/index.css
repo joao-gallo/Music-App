@@ -27,13 +27,10 @@ code {
 }
 
 .login-father button {
-  margin: 0px 0px 0px 0px;
-  padding: 5%;
+  margin: 3px 0px 0px 10px;
   height: min-content;
   background-color: #59F8E8;
-  margin-top: 10%;
-  width: 100%;
-  font-size: large;
+  font-size: medium;
 }
 
 .login-father button:hover{
@@ -85,7 +82,15 @@ code {
   color: #ffffff;
 }
 
+.results{
+  display: grid;
+  justify-content: center;
+  align-items: baseline;
+  padding: 2%;
+}
+
 .results h4 {
+  justify-content: center;
   color: #ffffff;
   flex-wrap: wrap;
 }
@@ -93,24 +98,45 @@ code {
 .results-search {
   color: #ffffff;
   text-decoration: none;
-  display:block;
+  display:grid;
   flex-wrap: wrap;
 }
 
 
 .results img{
-  display: flex;
-  flex-wrap: wrap;
   margin-bottom: 2%;
-  margin-left: 36%;
+  justify-content: center;
+  align-items: center;
 }
 
 .results-link {
   color: #ffffff;
   text-decoration: none;
   font-size: larger;
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   margin-bottom: 10%;
-  justify-content:center;
+}
+
+.music-list{
+  padding: 2%;
+  color: white;
+  margin-top: 10%;  
+  display:grid;
+  justify-content:space-around;
+  align-items:baseline;
+}
+
+.tracks-list audio{
+  display: grid;
+  margin-bottom: 30px;
+}
+
+.login-father a{
+  color: white;
+  background-color: #20A4F3;
+  text-decoration: none;
+  margin: 8%;
+  padding: 2%;
+  border-style:double;
 }

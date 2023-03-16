@@ -24,36 +24,36 @@ class MusicCard extends React.Component {
     const { list, songList } = this.props;
     const { loadedFav } = this.state;
     return (
-      <div className="tracks-list">
+      <div className="tracks-list" >
         {loadedFav ? <Loading />
-          : <p>Exibindo resultados</p>}
+          : <p>Check this amazing album songs</p>}
         <div>
           {list.map((music, i) => (
-            <div key={ i }>
-              <audio data-testid="audio-component" src={ music.previewUrl } controls>
-                <track kind="captions" />
-                O seu navegador não suporta o elemento
-                {' '}
-                <code>audio</code>
-                .
-              </audio>
-              <span>{music.trackName}</span>
+            <div key={i}>
+              <span className='music'>{music.trackName}</span>
               {songList.some((song) => song.trackId === music.trackId)
                 ? (
                   <input
                     checked
-                    data-testid={ `checkbox-music-${music.trackId}` }
-                    onChange={ (event) => this.songAdd(event) }
+                    data-testid={`checkbox-music-${music.trackId}`}
+                    onChange={(event) => this.songAdd(event)}
                     type="checkbox"
-                    name={ music.trackName }
-                  />)
-                : (
-                  <input
-                    data-testid={ `checkbox-music-${music.trackId}` }
-                    onChange={ (event) => this.songAdd(event) }
-                    type="checkbox"
-                    name={ music.trackName }
-                  />)}
+                    name={music.trackName}
+                    />)
+                    : (
+                      <input
+                      data-testid={`checkbox-music-${music.trackId}`}
+                      onChange={(event) => this.songAdd(event)}
+                      type="checkbox"
+                      name={music.trackName}
+                      />)}
+              <audio data-testid="audio-component" src={music.previewUrl} controls>
+                <track kind="captions" />
+                Element audio not supported
+                {' '}
+                <code>audio</code>
+                .
+              </audio>
             </div>
           ))}
         </div>
